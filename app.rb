@@ -6,7 +6,7 @@ class HangpersonApp < Sinatra::Base
 
   enable :sessions
   register Sinatra::Flash
-  
+  #before do and after do are used to execute before and after every saas request
   before do
     @game = session[:game] || HangpersonGame.new('')
   end
